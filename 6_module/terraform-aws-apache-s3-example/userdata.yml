@@ -1,0 +1,9 @@
+#cloud-config
+package_upgrade: true
+apt_update: true
+packages:
+ - apache2
+runcmd:
+ - sudo systemctl start apache2
+ - sudo systemctl enable apache2
+ - [aws, s3, cp, "s3://${bucket_name}" ,"/var/www/html/", "--recursive"]

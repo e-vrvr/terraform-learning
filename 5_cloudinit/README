@@ -1,0 +1,6 @@
+Sets up the EC2 instance with public IP, uses Cloud init to install and start apache2 server.
+
+Utilizes existing VPC and Internet Gateway.
+
+
+Adds public key so instance is accessible via SSH. 
